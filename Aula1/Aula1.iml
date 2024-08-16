@@ -1,11 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Exercício Aula 01 15/08/2024");
+
+        System.out.println("Questão 1:");
+
+//         1) Faça um programa que calcule o salário de um funcionário com
+//        base no valor da hora trabalhada de R$ 15.00 e na quantidade de
+//        40 horas trabalhadas e exiba o salário.
+
+        int horatrabalho = 15;
+        int jornada = 40;
+        int salario = horatrabalho*jornada * 4;
+
+        System.out.println("O valor da hora trabalhada é R$ " + horatrabalho + " reais, e o funcionário trabalhou numa jornada de " + jornada + " horas semanais.");
+        System.out.println("Portanto, o salário recebido pelo empregado é de R$ " + salario + " reais.");
+
+        System.out.println("Questão 2:");
+
+//        2) Elabore um programa que verifique se uma variável é maior,
+//        menor ou igual a outra e exiba esta informação na tela e exiba.
+
+        int var1 = 10;
+        int var2 = 20;
+
+        if (var1 > var2) {
+            System.out.println("A primeira variável é maior que a segunda.");
+        } else if (var1 == var2){
+            System.out.println("As variáveis são iguais.");
+        }else{
+            System.out.println("A primeira variável é menor que a segunda.");
+        }
+
+
+        System.out.println("Questão 3:");
+
+//        3) Elabore um programa que receba 3 notas (informadas pela
+//                pessoa desenvolvedora). Em seguida, calcule a média e verifique
+//        se o aluno está aprovado, reprovado ou na final.
+//        Observação: Aprovado >= 70, Reprovado < 40.
+//        Desafio: Como saber se está na final?
+
+        int nota1 = 10;
+        int nota2 = 9;
+        int nota3 = 10;
+        int media = (nota1+nota2+nota3)/3;
+
+        if (media >= 7) {
+            System.out.println("O aluno foi aprovado.");
+        } else if (media >= 4){
+            System.out.println("O aluno está na final.");
+        }else{
+            System.out.println("O aluno está reprovado.");
+        }
+
+        System.out.println("Questão 4:");
+
+//        4) Faça um programa para o cálculo de uma folha de pagamento.
+//                Para isso, o sistema deve saber o valor do salário.
+//                Com base na descrição abaixo, exiba o texto dos descontos do IR:
+//• Salário até R$900,00 (inclusive) – “isento”;
+//• Salário de R$901,00 até R$ 1500, 00 (inclusive) – “desconto de 5%”;
+//• Salario de1501,00 até R$ 2500,00 (Inclusive) – “desconto de 10%”;
+//• Salário acima de 2500 – “desconto de 20%”.
+
+        int salarioir = 2500;
+        System.out.println("O salário recebido é de R$ " + salarioir + " reais.");
+
+        if (salarioir <= 900) {
+            System.out.println("O funcionário é isento dos descontos de Imposto de Renda.");
+        } else if (salarioir <= 1500){
+            System.out.println("Será descontado o valor de 5% do salário recebido.");
+            System.out.println("O valor do desconto do IR é R$ " + (salarioir * 0.05) + ".");
+            System.out.println("O valor do salário líquido é R$ " + (salarioir - (salarioir * 0.05)) + ".");
+
+        }else if (salarioir <= 2500){
+            System.out.println("Será descontado o valor de 10% do salário recebido.");
+            System.out.println("O valor do desconto do IR é R$ " + (salarioir * 0.1) + ".");
+            System.out.println("O valor do salário líquido é R$ " + (salarioir - (salarioir * 0.1)) + ".");
+        }else{
+            System.out.println("Será descontado o valor de 20% do salário recebido.");
+            System.out.println("O valor do desconto do IR é R$ " + (salarioir * 0.2) + ".");
+            System.out.println("O valor do salário líquido é R$ " + (salarioir - (salarioir * 0.2)) + ".");
+        }
+
+
+    }
+}
